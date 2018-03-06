@@ -1,0 +1,13 @@
+{
+    "name": "hexin/ask-chitoppie",
+    "authors": [
+        {
+            "name": "hexium310",
+            "email": "hexium310@gmail.com"
+        }
+    ],
+    "require": {
+        "mpyw/cowitter": "^1.0",
+        "vlucas/phpdotenv": "^2.4"
+    }
+}
