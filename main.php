@@ -15,9 +15,9 @@ $client = new Client([
     getenv('ACCESS_TOKEN_SECRET'),
 ]);
 
-$words = implode(' ', $splitWords = array_slice($argv, 1));
+$words = implode(' ', array_slice($argv, 1));
 
-if (empty($splitWords)) {
+if (empty($words)) {
     die('This application was crash.');
 }
 
