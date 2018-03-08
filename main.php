@@ -18,7 +18,7 @@ $client = new Client([
 $words = implode(' ', array_slice($argv, 1));
 
 if (empty($words)) {
-    die('This application was crash.');
+    die("The application has crashed.\n");
 }
 
 try {
