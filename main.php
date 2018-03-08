@@ -17,7 +17,7 @@ $client = new Client([
 
 $words = implode(' ', array_slice($argv, 1));
 try {
-	$target = getenv('JAVASHIT_ACCOUNT');
+    $target = getenv('JAVASHIT_ACCOUNT');
     $client->post('statuses/update', [
         'status' => "@{$target} 👉👉👉 {$words}🤔 👈👈👈 この英語教えて〜〜〜 🙏🐷🦂💖😀",
     ]);
