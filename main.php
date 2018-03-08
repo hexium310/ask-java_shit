@@ -15,7 +15,12 @@ $client = new Client([
     getenv('ACCESS_TOKEN_SECRET'),
 ]);
 
-$words = implode(' ', array_slice($argv, 1));
+$words = implode(' ', $splitWords = array_slice($argv, 1));
+
+if (empty($splitWords)) {
+    die('This application was crash.');
+}
+
 try {
     $client->post('statuses/update', [
         'status' => "@java_shit 👉👉👉 {$words}🤔 👈👈👈 この英語教えて〜〜〜 🙏🐷🦂💖😀",
