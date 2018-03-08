@@ -9,5 +9,11 @@
     "require": {
         "mpyw/cowitter": "^1.0",
         "vlucas/phpdotenv": "^2.4"
+    },
+    "scripts": {
+        "init-dotenv": "cp -n .env.example .env || :",
+        "post-install-cmd": [
+            "@composer init-dotenv"
+        ]
     }
 }

@@ -17,8 +17,9 @@ $client = new Client([
 
 $words = implode(' ', array_slice($argv, 1));
 try {
+    $target = getenv('JAVASHIT_ACCOUNT');
     $client->post('statuses/update', [
-        'status' => "@java_shit 👉👉👉 {$words}🤔 👈👈👈 この英語教えて〜〜〜 🙏🐷🦂💖😀",
+        'status' => "@{$target} 👉👉👉 {$words}🤔 👈👈👈 この英語教えて〜〜〜 🙏🐷🦂💖😀",
     ]);
 } catch (\RuntimeException $e) {
     error_log($e->getMessage());
