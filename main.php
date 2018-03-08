@@ -16,6 +16,6 @@ $client = new Client([
 ]);
 
 $words = implode(' ', array_slice($argv, 1));
-$client->post ('statuses/update', [
+$client->post('statuses/update', [
     'status' => "@java_shit 👉👉👉 {$words}🤔 👈👈👈 この英語教えて〜〜〜 🙏🐷🦂💖😀",
 ]);
