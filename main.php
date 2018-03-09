@@ -23,6 +23,11 @@ $client = new Client([
 ]);
 
 $words = implode(' ', array_slice($argv, 1));
+
+if (empty($words)) {
+    die("The application has crashed.\n");
+}
+
 try {
     $target = getenv('JAVASHIT_ACCOUNT');
     $client->post('statuses/update', [
